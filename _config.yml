@@ -38,5 +38,7 @@ tag_dir: tag/
 excerpt_separator: "\n\n\n\n"
 
 # paginate
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-gist
+  - jekyll-youtube
 paginate: 2 
