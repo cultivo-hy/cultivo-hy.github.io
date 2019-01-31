@@ -22,13 +22,15 @@ Have you ever had to explain to anyone what a standard deviation is? Or perhaps,
 
 ### AVERAGE
 
-The average (also called the mean) is probably well understood by most. It represents a "typical" value. For example, the average temperature for the day based on the past is often given on weather reports. It represents a typical temperature for the time of year.
+
+The average (also called the mean) is probably well understood by most. It represents a “typical” value. For example, the average temperature for the day based on the past is often given on weather reports. It represents a typical temperature for the time of year.
 
 The average is calculated by adding up the results you have and dividing by the number of results. For example, suppose we have wire cable that is cut to different lengths for a customer. These lengths, in feet, are 5, 6, 2, 3, and 8. The average is determined by adding up these five numbers and dividing by 5. In this case, the average (X) is:
 
-X = (5+6+2+3+8)/5 = 4.8
+​									X = (5+6+2+3+8)/5 = 4.8
 
 The average length of wire for these five pieces is 4.8 feet.
+
 
 
 ### STANDARD DEVIATION
@@ -342,7 +344,7 @@ The normal distribution has several interesting characteristics:
 - As you move away from the average, the points occur with less frequency.
 - Most of the area under the curve (99.7%) lies between -3σ and +3σ of the average.
 
-### 
+
 
 ### PROBABILITY DENSITY FUNCTION
 
@@ -362,7 +364,7 @@ The distributions below show how the normal distribution changes as the standard
 
 The distributions above were generated using Excel's NORMSDIST function using an average of 100, one of the three standard deviations above and an X values range from 20 to 180. So, if you know your process average and process standard deviation, you can easily draw the normal distribution for your process. This, of course, assumes that your process is normally distributed.
 
-### 
+
 
 ### STANDARD NORMAL DISTRIBUTION
 
@@ -378,7 +380,7 @@ This is known as the standard normal distribution. For this distribution, the ar
 
  
 
-### 
+
 
 ### HOW TO USE THE NORMAL DISTRIBUTION
 
@@ -412,7 +414,7 @@ For your process, the following calculations can be done:
 
 Thus, 68% of the data lies between 90 and 110; 95% of the data between 80 and 120; and 99.7% of the data between 70 and 130. The specifications for the process have been 65 to 140. Life is good - everything has been within specifications.
 
-### 
+
 
 ### NORMAL DISTRIBUTION AND SPECIFICATIONS
 
@@ -422,7 +424,7 @@ Now suppose a customer has decided that the upper specification limit for your p
 
 For our example, x = 112, so
 
-z = (112-100)/10 = 12/10 = 1.2
+​								z = (112-100)/10 = 12/10 = 1.2
 
 z represents the number of standard deviations some value is away from the average. So, 112 is 1.2 standard deviations above the average. If z is negative, it means that the value is below the average.
 
@@ -455,3 +457,352 @@ To find out the area between two values, you use the fact that the area under th
 ​								1 - .0446 - .1151 = 0.8403
 
 Thus, 84.03% of the data lies between 83 and 112. Thus, with the new specifications, 84% of your product will be within specification. The remaining 16% will be out specification. And since the process is in statistical control, this will continue to be true until the process is changed fundamentally.
+
+
+
+---
+# 4.Histograms
+
+There are a number of ways to determine if you have a normal distribution. One of the easiest is to construct a histogram based on the data. Simply examine the histogram and see if you think it is bell shaped. If you have lots of data, this is a perfectly valid way of determining if your data are normally distributed. Please see our December 2005 and January 2006 newsletters for more information on creating and using histograms.
+
+Note that a histogram of real data will not look like a perfect normal distribution. All you are trying to determine is if describing the data as a normal distribution is reasonable. For example, take a look at the histogram below. Does it look like a bell-shaped curve? Does it look normal? It is not perfect, but it appears that it is reasonable to assume that these data come from a normal distribution.
+
+![histogram: normal distribution](https://www.spcforexcel.com/files/images/hist_normal.png)
+
+Now examine the histogram below. Does it look like a bell-shaped curve? This does not look bell-shaped. Most values tend toward zero. With these data, it is not reasonable to assume that there is a normal distribution present.
+
+ 
+
+![histogram - nonnormal data](https://www.spcforexcel.com/files/images/hist_nonnormal.png)
+
+ 
+
+So, it is perfectly valid to use a histogram to determine it you think your data can be reasonably represented by a normal distribution. If you don't have a lot of data, histograms will not be very useful in determining if you have a normal distribution. You can randomly take 20 samples from a normal distribution and the resulting histogram may not look normal. In these cases, you need to use the normal probability plot.
+
+
+### NORMAL PROBABILITY PLOTS
+
+A normal probability plot can be used to determine if small sets of data come from a normal distribution. This involves using the probability properties of the normal distribution. We will eventually make a plot that we hope is linear. We will demonstrate the procedure using the data below.
+
+Suppose we have ten samples from our process.
+
+100, 98, 101, 93, 123, 112, 85, 76, 119, 111
+
+We want to know if we can reasonably assume that these data come from a normal distribution. We can make a normal probability plot to help tell us this.
+
+The steps below are used to make a normal probability plot of these data.
+
+*1. Sort the data in ascending order.*
+
+ 
+
+| **Data** | **Sorted** **Data** |
+| -------- | ------------------- |
+| 100      | 76                  |
+| 98       | 85                  |
+| 101      | 93                  |
+| 93       | 98                  |
+| 123      | 100                 |
+| 112      | 101                 |
+| 85       | 111                 |
+| 76       | 112                 |
+| 119      | 119                 |
+| 111      | 123                 |
+
+ 
+
+*2. Number the sorted data from 1 to n where n is the number of samples (10 in this example).*
+
+| **Data** | **Sorted** **Data** | **Number** |
+| -------- | ------------------- | ---------- |
+| 100      | 76                  | 1          |
+| 98       | 85                  | 2          |
+| 101      | 93                  | 3          |
+| 93       | 98                  | 4          |
+| 123      | 100                 | 5          |
+| 112      | 101                 | 6          |
+| 85       | 111                 | 7          |
+| 76       | 112                 | 8          |
+| 119      | 119                 | 9          |
+| 111      | 123                 | 10         |
+
+ 
+
+*3. Calculate (i-0.5)/n for each value; this represents the cumulative probability.*
+
+ 
+
+| **Data** | **Sorted** **Data** | **Number** | **Cumulative** **Probability** |
+| -------- | ------------------- | ---------- | ------------------------------ |
+| 100      | 76                  | 1          | 0.05                           |
+| 98       | 85                  | 2          | 0.15                           |
+| 101      | 93                  | 3          | 0.25                           |
+| 93       | 98                  | 4          | 0.35                           |
+| 123      | 100                 | 5          | 0.45                           |
+| 112      | 101                 | 6          | 0.55                           |
+| 85       | 111                 | 7          | 0.65                           |
+| 76       | 112                 | 8          | 0.75                           |
+| 119      | 119                 | 9          | 0.85                           |
+| 111      | 123                 | 10         | 0.95                           |
+
+ 
+
+*4. Determine the z value from the standard normal distribution for each cumulative probability.*
+
+There are a number of ways to do this. The first cumulative probability value is 0.05. You can use the standard normal distribution table in last month's newsletter to find the value of z corresponding to 0.05 probability. If you look at the table, you will see that z = -1.64 gives a cumulative probability of 0.0505 and a z = -1.65 gives a cumulative probability of 0.0495. So, the value of z that gives a cumulative probability of 0.05 is between -1.65 and -1.64.
+
+The easiest way to do this is to use Excel's NORMSINV function. For example, NORMSINV(0.05) = -1.64485. The rest of the values are shown in the table below.
+
+ 
+
+| **Data** | **Sorted**  **Data** | **Number** | **Cumulative** **Probability** | **z Value** |
+| -------- | -------------------- | ---------- | ------------------------------ | ----------- |
+| 100      | 76                   | 1          | 0.05                           | -1.64485    |
+| 98       | 85                   | 2          | 0.15                           | -1.03643    |
+| 101      | 93                   | 3          | 0.25                           | -0.67449    |
+| 93       | 98                   | 4          | 0.35                           | -0.38532    |
+| 123      | 100                  | 5          | 0.45                           | -0.12566    |
+| 112      | 101                  | 6          | 0.55                           | 0.125661    |
+| 85       | 111                  | 7          | 0.65                           | 0.385321    |
+| 76       | 112                  | 8          | 0.75                           | 0.67449     |
+| 119      | 119                  | 9          | 0.85                           | 1.036433    |
+| 111      | 123                  | 10         | 0.95                           | 1.644853    |
+
+ 
+
+*5. Plot the sorted data versus the z values. The plot is shown below.*
+
+ 
+
+![normal probability plot](https://www.spcforexcel.com/files/images/normprobplotnoline.png)
+
+The question you want to ask yourself is "Do the points fall roughly in a straight line?" If they do, you can assume that you have a normal distribution. You can see from the chart above, the points appear to fall along a straight line. 
+
+ 
+
+![normal probability plot with line](https://www.spcforexcel.com/files/images/normprobplotwithline.png)
+
+Since the data fall in a straight line, you can assume that you have a normal distribution.
+
+If the data do not fall in a straight line, then you cannot assume that you have a normal distribution. The normal probability plot for the non-normal histogram is shown below. Note that it tails like an S at one end. This is often typical of distributions that are not normal.
+
+![normal prob plot with non-normal data](https://www.spcforexcel.com/files/images/normprobplotnonnormaldata.png)
+
+
+### SUMMARY
+
+There are two simple methods of determining if your data are normally distributed. If you have lots of data (100 points or more), you can use a histogram. If the histogram is somewhat bell-shaped, you can assume that you have a normal distribution. If you don't have lots of data, construct a normal probability plot and see if the points fall roughly in a straight line. If they do, you can assume that your data are normally distributed.
+
+---
+# 5.Anderson-Darling Test for Normality
+
+You have a set of data. You would like to know if it fits a certain distribution - for example, the normal distribution. Maybe there are a number of statistical tests you want to apply to the data but those tests assume your data are normally distributed? How can you determine if the data are normally distributed. You can construct a histogram and see if it looks like a normal distribution. You could also make a normal probability plot and see if the data falls in a straight line.  We have past newsletters on histograms and making a normal probability plot.  There is an additional test you can apply. It is called the Anderson-Darling test and is the subject of this month's newsletter.
+
+We have included an Excel workbook that you can download to perform the Anderson-Darling test for up to 200 data points.  It includes a normal probability plot.  We have also included a link to VBA function macro that you can use to calculate the Anderson-Darling statistic and associated p-value. 
+
+
+
+### THE ANDERSON-DARLING TEST HYPOTHESES
+
+The Anderson-Darling Test was developed in 1952 by Theodore Anderson and Donald Darling. It is a statistical test of whether or not a dataset comes from a certain probability distribution, e.g., the normal distribution. The test involves calculating the Anderson-Darling statistic.  You can use the Anderson-Darling statistic to compare how well a data set fits different distributions.
+
+The two hypotheses for the Anderson-Darling test for the normal distribution are given below:
+
+> H0: The data follows the normal distribution
+>
+> H1: The data do not follow the normal distribution
+
+The null hypothesis is that the data are normally distributed; the alternative hypothesis is that the data are non-normal.
+
+In many cases (but not all), you can determine a p value for the Anderson-Darling statistic and use that value to help you determine if the test is significant are not. Remember the p ("probability") value is the probability of getting a result that is more extreme if the null hypothesis is true. If the p value is low (e.g., <=0.05), you conclude that the data do not follow the normal distribution. Remember that you chose the significance level even though many people just use 0.05 the vast majority of the time. We will look at two different data sets and apply the Anderson-Darling test to both sets.
+
+
+
+### TWO DATA SETS
+
+The first data set comes from Mater Mother's Hospital in Brisbane, Australia. The data set contains the birth weight, gender, and time of birth of 44 babies born in the 24-hour period of 18 December 1997. The data were explained using four different distributions. We will focus on using the normal distribution, which was applied to the birth weights. The data are shown in the table below.
+
+**Table of Birth Weights (Grams)** 
+
+| 3837 | 3480 |
+| ---- | ---- |
+| 3334 | 3116 |
+| 3554 | 3428 |
+| 3838 | 3783 |
+| 3625 | 3345 |
+| 2208 | 3034 |
+| 1745 | 2184 |
+| 2846 | 3300 |
+| 3166 | 2383 |
+| 3520 | 3428 |
+| 3380 | 4162 |
+| 3294 | 3630 |
+| 2576 | 3406 |
+| 3208 | 3402 |
+| 3521 | 3500 |
+| 3746 | 3736 |
+| 3523 | 3370 |
+| 2902 | 2121 |
+| 2635 | 3150 |
+| 3920 | 3866 |
+| 3690 | 3542 |
+| 3430 | 3278 |
+
+ 
+
+The second set of data involves measuring the lengths of forearms in adult males. The 140 data values are in inches. The data is given in the table below.
+
+**Table of Forearm Lengths**
+
+| 17.3 | 20.9 | 18.7 | 17.9 | 18.3 |
+| ---- | ---- | ---- | ---- | ---- |
+| 19   | 18.1 | 18.8 | 19.1 | 17.9 |
+| 18.2 | 19.4 | 19.4 | 17.3 | 18.3 |
+| 19   | 20.5 | 18.5 | 19.4 | 19.6 |
+| 19   | 20.4 | 18.6 | 18.3 | 19.6 |
+| 20.4 | 16.1 | 19.6 | 19.3 | 21   |
+| 18.3 | 18.7 | 18.5 | 17.2 | 18   |
+| 19.9 | 18.8 | 20   | 17.5 | 17.9 |
+| 18.7 | 17.3 | 17.8 | 19.6 | 18.1 |
+| 20.9 | 18.1 | 19.8 | 17.6 | 19.5 |
+| 17.7 | 19.9 | 16.6 | 20   | 17.1 |
+| 19.1 | 19.6 | 19.4 | 19.9 | 18.9 |
+| 19.7 | 18.4 | 19.3 | 16.9 | 18.5 |
+| 18.1 | 19.5 | 20.1 | 19.5 | 19.2 |
+| 18.4 | 16.8 | 20.5 | 20.4 | 20.5 |
+| 17.5 | 17.1 | 20   | 19.1 | 18.3 |
+| 18.9 | 18.9 | 20.8 | 18.5 | 19.4 |
+| 19   | 19.7 | 17.7 | 18.3 | 21.4 |
+| 20.5 | 19.7 | 19.9 | 19.8 | 19   |
+| 17.3 | 19.2 | 18.8 | 19.1 | 18.6 |
+| 18.3 | 20.6 | 16.4 | 17.5 | 19.5 |
+| 18.4 | 20.1 | 18.5 | 18.5 | 17.4 |
+| 18.6 | 18.8 | 19   | 19.3 | 18.5 |
+| 19.8 | 17.1 | 20.6 | 19.1 | 18.4 |
+| 20.2 | 18.6 | 19.2 | 17.4 | 18.3 |
+| 18.5 | 18   | 17.1 | 16.3 | 20.7 |
+| 18.5 | 18.7 | 16.3 | 18.2 | 19.3 |
+| 18   | 20.3 | 17.2 | 18.8 | 17.7 |
+
+ 
+
+
+
+### THE ANDERSON-DARLING TEST
+
+The Anderson-Darling Test will determine if a data set comes from a specified distribution, in our case, the normal distribution. The test makes use of the cumulative distribution function. The Anderson-Darling statistic is given by the following formula:
+
+![Anderson-Darling Statistic](https://www.spcforexcel.com/files/images/ADeq1.png)
+
+where n = sample size, F(X) = cumulative distribution function for the specified distribution and i = the ith sample when the data is sorted in ascending order.  You will often see this statistic called A2.
+
+To demonstrate the calculation using Microsoft Excel and to introduce the workbook, we will use the first five results from the baby weight data. Those five weights are 3837, 3334, 3554, 3838, and 3625 grams. You definitely want to have more data points than this to determine if your data are normally distributed. We will walk through the steps here.  You can download the Excel workbook which will do this for you automatically here: [download workbook](https://www.spcforexcel.com/files/Anderson-Darling-Workbook.xls). Of course, the Anderson-Darling test is included in the SPC for Excel software.
+
+The data are placed in column E in the workbook. After entering the data, the workbook determines the average, standard deviation and number of data points present The workbook can handle up to 200 data points.  
+
+ 
+
+![Workbook output](https://www.spcforexcel.com/files/images/AD1A.png)
+
+ 
+
+The next step is to number the data from 1 to n as shown below.
+
+![Workbook output](https://www.spcforexcel.com/files/images/AD1.png)
+
+The formula in Cell F2 is "=IF(ISBLANK(E2),"",1)". The formula in cell F3 is "=IF(ISBLANK(E3),"",F2+1)". The formula in cell F3 is copied down the column.
+
+To calculate the Anderson-Darling statistic, you need to sort the data in ascending order. This is done in column G using the Excel function SMALL(array, k). This function returns the kth smallest number in the array. The sorted data are placed in column G.
+
+![Workbook output](https://www.spcforexcel.com/files/images/AD2.png)
+
+The formula in cell G2 is "=IF(ISBLANK(E2), NA(),SMALL(E$2:E$201,F2))". This formula is copied down the column.  The NA() is used so that Excel will not plot points with no data.
+
+Now we are ready to calculate F(Xi). Remember, this is the cumulative distribution function. In Excel, you can determine this using either the NORMDIST or NORMSDIST functions. They both will give the same result. We will use the NORMDIST function. The workbook places these results in column H.
+
+![Worbook Output](https://www.spcforexcel.com/files/images/AD3.png)
+
+The formula in cell H2 is "=IF(ISBLANK(E2),"",NORMDIST(G2, $B$3, $B$4, TRUE))". This formula is copied down column H. The average is in cell B3; the standard deviation in cell B4. Using "TRUE" returns the cumulative distribution function.
+
+Take a look again at the Anderson-Darling statistic equation:
+
+![anderson-darling equation](https://www.spcforexcel.com/files/images/ADeq1.png)
+
+We have F(Xi). The equation shows we need 1-F(Xn-i+1). It takes two steps to get this in the workbook. First the value of 1- F(Xi) is calculated in column I and then the results are sorted in column J. The results are shown below.
+
+ 
+
+![workbook output](https://www.spcforexcel.com/files/images/AD4.png)
+
+ 
+
+The formula in cells I2 is "=IF(ISBLANK(E2), "", 1-H2)" and the formula in cell J2 is "=IF(ISBLANK(E2),"",SMALL(I$2:I$201,F2))." These are copied down those two columns.
+
+We are now ready to calculate the summation portion of the equation. So, define the following for the summation term in the Anderson-Darling equation:
+
+![anderson-darling summation term](https://www.spcforexcel.com/files/images/adsum.png)
+
+This result is placed in column K in the workbook.
+
+![workbook output](https://www.spcforexcel.com/files/images/AD5.png)
+
+The formula in cell K2 is "=IF(ISBLANK(E2),"",(2*F2-1)*(LN(H2)+LN(J2)))". This formula is copied down the column.
+
+We are now ready to calculate the Anderson-Darling statistic. This is given by:
+
+![anderson-darling result](https://www.spcforexcel.com/files/images/adresult.png)
+
+The value of AD needs to be adjusted for small sample sizes. The adjusted AD value is given by:
+
+![adjusted anderson-darling equation](https://www.spcforexcel.com/files/images/adstar.png)
+
+For these 5 data points, AD* = .357. The workbook has the following output in columns A and B:
+
+![Workbook Output](https://www.spcforexcel.com/files/images/AD6.png)
+
+The last entry is the p value.  That depends on the value of AD*.
+
+
+
+### THE P VALUE FOR THE ADJUSTED ANDERSON-DARLING STATISTIC
+
+The calculation of the p value is not straightforward. The reference most people use is R.B. D'Augostino and M.A. Stephens, Eds., 1986, Goodness-of-Fit Techniques, Marcel Dekker. There are different equations depending on the value of AD*. These are given by:
+
+- If AD*=>0.6, then p = exp(1.2937 - 5.709(AD*)+ 0.0186(AD*)2
+- If 0.34 < AD* < .6, then p = exp(0.9177 - 4.279(AD*) - 1.38(AD*)2
+- If 0.2 < AD* < 0.34, then p = 1 - exp(-8.318 + 42.796(AD*)- 59.938(AD*)2)
+- If AD* <= 0.2, then p = 1 - exp(-13.436 + 101.14(AD*)- 223.73(AD*)2)
+
+The workbook (and the SPC for Excel software) uses these equations to determine the p value for the Anderson-Darling statistic.
+
+
+
+### APPLYING THE ANDERSON-DARLING TEST
+
+Now let's apply the test to the two sets of data, starting with the baby weight. The question we are asking is - are the baby weight data normally distributed?" The results for that set of data are given below.
+
+> AD = 1.717
+> AD* =  1.748
+> p Value = 0.000179
+
+The p value is less than 0.05. Since the p value is low, we reject the null hypotheses that the data are from a normal distribution. You can construct a normal probability plot of the data. How to do this is explained in our[ June 2009 newsletter](http://www.spcforexcel.com/normal-probability-plots).   The normal probability plot is included in the workbook. If the data comes from a normal distribution, the points should fall in a fairly straight line. You can see that this is not the case for these data and confirms that the data does not come from a normal distribution.
+
+![baby weight normal probability plot](https://www.spcforexcel.com/files/images/adbabyweight.png)
+
+Now consider the forearm length data.  Again, we are asking the question - are the data normally distributed?  The results for the elbow lengths 
+
+> AD = 0.237
+> AD* =  0.238
+> p Value =  0.782045
+
+Since the p value is large, we accept the null hypotheses that the data are from a normal distribution. The normal probability plot shown below confirms this.
+
+![normal probability plot for forearm length](https://www.spcforexcel.com/files/images/adforearmlength.png)
+
+The workbook contains all you need to do the Anderson-Darling test and to see the normal probability plot.  If you prefer to use VBA code, this [link](http://www.excelforum.com/excel-worksheet-functions/781110-anderson-darling-normality-sense-check-please.html) gives you the VBA code for an Anderson-Darling function.   You can copy this code into a workbook and use it to calculate AD, AD* and the p value for the data.
+
+
+
+### SUMMARY
+
+The Anderson-Darling test is used to determine if a data set follows a specified distribution.  In this newsletter, we applied this test to the normal distribution.  The test involves calculating the Anderson-Darling statistic and then determining the p value for the statistic.  It is often used with the normal probability plot.
