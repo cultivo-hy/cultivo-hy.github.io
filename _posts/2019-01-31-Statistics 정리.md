@@ -17,6 +17,7 @@ category:
 * toc
 {:toc}
 
+# 1
 
 ### AVERAGE
 
@@ -69,7 +70,7 @@ The sum of the deviations from average added up to zero! This is not a coinciden
 
  
 
-### 
+
 
 ### MORE ON STANDARD DEVIATION
 
@@ -81,7 +82,7 @@ The equation for a sample standard deviation we just calculated is shown in the 
 
 ![sigma equation](https://www.spcforexcel.com/files/images/sigmaequation.gif)
 
-### 
+
 
 ### USE OF STANDARD DEVIATION
 
@@ -97,7 +98,13 @@ To determine if a normal distribution exists, you can make a histogram of the in
 
 Since the process is in statistical control, you know that about 67% of the time, it will take 12 to 16 days to process a credit application; 95% of the time it will take 10 to 18 days; and 99.7% of the time it will take 8 to 20 days. So, the average and standard deviation (for a normal distribution) allow you to begin to consider process capability. Can the process meet our customer specifications? Take a look at our three part newsletter on process capability.
 
+
+
+
 ---
+# 2
+
+
 
 You have a set of samples.  Maybe you took 15 samples from a batch of finished product and measured those samples for density.  Now you are armed with data you can analyze.  And your software package has a feature that will generate the descriptive statistics for these data.  You enter the data into your software package and run the descriptive statistics.  You get a lot of numbers – the sample size, average, standard deviation, range, maximum, minimum and a host of other numbers.  You spy two numbers: the skewness and kurtosis.  What do these two statistics tell you about your sample?
 
@@ -248,7 +255,7 @@ Are the skewness and kurtosis any value to you?  You take a sample from your pro
 
 ![data word](https://www.spcforexcel.com/files/images/Skewness-Kurtosis-Figures/data.png)The skewness of the data is 0.007. The kurtosis is 0.03. Both values are close to 0 as you would expect for a normal distribution. These two numbers represent the "true" value for the skewness and kurtosis since they were calculated from all the data. In real life, you don't know the real skewness and kurtosis because you have to sample the process. This is where the problem begins for skewness and kurtosis. Sample size has a big impact on the results.
 
-### 
+
 
 ### IMPACT OF SAMPLE SIZE ON SKEWNESS AND KURTOSIS
 
