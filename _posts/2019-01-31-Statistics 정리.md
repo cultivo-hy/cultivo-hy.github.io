@@ -17,7 +17,7 @@ category:
 * toc
 {:toc}
 
-# 1
+# 1 Explaining Standard Deviation
 
 ### AVERAGE
 
@@ -102,7 +102,7 @@ Since the process is in statistical control, you know that about 67% of the time
 
 
 ---
-# 2
+# 2 Are the Skewness and Kurtosis Useful Statistics?
 
 
 
