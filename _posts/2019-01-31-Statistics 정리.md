@@ -17,7 +17,8 @@ category:
 * toc
 {:toc}
 
-# 1 Explaining Standard Deviation
+# 1.Explaining Standard Deviation
+Have you ever had to explain to anyone what a standard deviation is? Or perhaps, you aren't sure yourself what it is. What is it used for? Why is it important in process improvement? When using control charts, the standard deviation, as well as the average, is a very important parameter. One must understand what is meant by the standard deviation. This newsletter addresses this. We will start with describing what an average is.
 
 ### AVERAGE
 
@@ -102,7 +103,7 @@ Since the process is in statistical control, you know that about 67% of the time
 
 
 ---
-# 2 Are the Skewness and Kurtosis Useful Statistics?
+# 2. Are the Skewness and Kurtosis Useful Statistics?
 
 
 
