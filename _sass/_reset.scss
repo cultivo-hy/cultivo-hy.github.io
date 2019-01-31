@@ -87,12 +87,12 @@ table {
     border-top: 2px solid #777;
     border-bottom: 2px solid #777;
     border-collapse: collapse;
-    max-width: 100%;
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
     thead {
         border-bottom: 1px solid #777;
         background-color: #aaa;
+	align : center;
         color: #fff;
     }
     th {
@@ -111,6 +111,7 @@ table {
     }
     td {
         padding: 2px 10px;
+	text-align: center
     }
 }
 p {
