@@ -17,7 +17,8 @@ category:
 * toc
 {:toc}
 
-# 1.Explaining Standard Deviation
+# Explaining Standard Deviation
+---
 Have you ever had to explain to anyone what a standard deviation is? Or perhaps, you aren't sure yourself what it is. What is it used for? Why is it important in process improvement? When using control charts, the standard deviation, as well as the average, is a very important parameter. One must understand what is meant by the standard deviation. This newsletter addresses this. We will start with describing what an average is.
 
 ### AVERAGE
@@ -105,8 +106,8 @@ Since the process is in statistical control, you know that about 67% of the time
 
 
 ---
-# 2. Are the Skewness and Kurtosis Useful Statistics?
-
+# Are the Skewness and Kurtosis Useful Statistics?
+---
 
 
 You have a set of samples.  Maybe you took 15 samples from a batch of finished product and measured those samples for density.  Now you are armed with data you can analyze.  And your software package has a feature that will generate the descriptive statistics for these data.  You enter the data into your software package and run the descriptive statistics.  You get a lot of numbers – the sample size, average, standard deviation, range, maximum, minimum and a host of other numbers.  You spy two numbers: the skewness and kurtosis.  What do these two statistics tell you about your sample?
@@ -319,9 +320,9 @@ To download the workbook containing the macro and results that generated the abo
 
 
 
-===
-# 3.Normal distribution
-
+---
+# Normal distribution
+---
 ### INTRODUCTION TO THE NORMAL DISTRIBUTION
 
 If you search for "normal distribution" on Google, you will get a lot of hits. Wikipedia, the free encyclopedia, starts out its normal distribution with:
@@ -461,8 +462,8 @@ Thus, 84.03% of the data lies between 83 and 112. Thus, with the new specificati
 
 
 ---
-# 4.Histograms
-
+# Histograms
+---
 There are a number of ways to determine if you have a normal distribution. One of the easiest is to construct a histogram based on the data. Simply examine the histogram and see if you think it is bell shaped. If you have lots of data, this is a perfectly valid way of determining if your data are normally distributed. Please see our December 2005 and January 2006 newsletters for more information on creating and using histograms.
 
 Note that a histogram of real data will not look like a perfect normal distribution. All you are trying to determine is if describing the data as a normal distribution is reasonable. For example, take a look at the histogram below. Does it look like a bell-shaped curve? Does it look normal? It is not perfect, but it appears that it is reasonable to assume that these data come from a normal distribution.
@@ -594,7 +595,7 @@ If the data do not fall in a straight line, then you cannot assume that you have
 There are two simple methods of determining if your data are normally distributed. If you have lots of data (100 points or more), you can use a histogram. If the histogram is somewhat bell-shaped, you can assume that you have a normal distribution. If you don't have lots of data, construct a normal probability plot and see if the points fall roughly in a straight line. If they do, you can assume that your data are normally distributed.
 
 ---
-# 5.Anderson-Darling Test for Normality
+# 5. Anderson-Darling Test for Normality
 
 You have a set of data. You would like to know if it fits a certain distribution - for example, the normal distribution. Maybe there are a number of statistical tests you want to apply to the data but those tests assume your data are normally distributed? How can you determine if the data are normally distributed. You can construct a histogram and see if it looks like a normal distribution. You could also make a normal probability plot and see if the data falls in a straight line.  We have past newsletters on histograms and making a normal probability plot.  There is an additional test you can apply. It is called the Anderson-Darling test and is the subject of this month's newsletter.
 
@@ -806,3 +807,146 @@ The workbook contains all you need to do the Anderson-Darling test and to see th
 ### SUMMARY
 
 The Anderson-Darling test is used to determine if a data set follows a specified distribution.  In this newsletter, we applied this test to the normal distribution.  The test involves calculating the Anderson-Darling statistic and then determining the p value for the statistic.  It is often used with the normal probability plot.
+
+
+---
+# Hypothesis Testing
+---
+What is a hypothesis?  According to the Merriam-Webster’s on-line dictionary, a hypothesis is an idea or theory that is not proven but that leads to further study or discussion.  There are many examples of hypothesis.  For example, people who get flu shots are less likely to get the flu.  Or just the opposite hypothesis: getting a flu shot makes no difference in whether someone gets the flu.
+
+So, a hypothesis is just a statement of theory.  It may or may not be true.  A drug company can claim that a new drug is better at decreasing blood pressure.   You may claim that the diet plan you created helps people lose more weight than a nationally known diet plan.  All these things are just statements – just hypotheses. 
+
+The hypothesis is the starting point.  From there, we have to test the hypothesis and reach a decision if the hypothesis is probably true or probably false.  Note the word “probably.”  There is always variation – so there is always a chance for you to make the wrong decision.  This month’s publication takes a look at the five steps involved in conducting a hypothesis test.
+
+### THE PROBLEM
+
+A lean six sigma project team is recommending a change in the coating process you are in charge of to help reduce costs.  The key variable in your process is the thickness of the coating. 
+
+The average coating thickness is 5 mil.  You want to be sure that the coating thickness remains the same before you will approve the process change. 
+
+The team wants to perform a hypothesis test to prove that the average coating thickness will not change.  The team will go through the basic five steps of hypothesis testing:
+
+1. Formulate the null hypothesis and the alternative hypothesis
+2. Determine the significance level
+3. Collect the data and calculate the sample statistics
+4. Calculate the p value for the hypothesis test
+5. Compare the p value to the desired significance level
+
+The details of the five steps are shown below.  However, before those steps are covered, a review of the standard normal distribution is needed.  This will be required when we do some calculations.
+
+
+
+### A BRIEF PAUSE FOR THE STANDARD NORMAL DISTRIBUTION
+
+We need to digress a moment here because we will need to make use of a special case of the normal distribution – when the average = 0 and the standard deviation = 1. This special case is called the standard normal distribution and is shown in Figure 1.
+
+**Figure 1: Standard Normal Distribution**
+
+![standard_normal_curve](https://www.spcforexcel.com/files/images/standard_normal_distribution.png)
+
+For this distribution, the area under the curve from -∞ to +∞ is equal to 1.0. In addition, the area under the curve is proportional to the fraction of measurements that fall in that region. These two facts can used to help determine the fraction of measurements that fall above some value (such as a specification limit), below some value, or between two values.
+
+![histogram](https://www.spcforexcel.com/files/images/hypothesis_histogram.png)The x axis in Figure 1 has “z” values.   Any normal distribution can be converted to the standard normal distribution by using the following to calculate z:
+
+​										z=  (x- μ)/σ
+
+where x is some value, μ is the average, and σ is the standard deviation of the x values.  The value of z (the z score) is simply how many standard deviations a value, x, is from the average. 
+
+For example, suppose x is 1.5 standard deviations below the average.  In this case, z = -1.5.  The area below z = -1.5 is the percentage of x values that are more than 1.5 standard deviations below the average.  For z = -1.5, that area is 6.68% as is shown in Figure 1.   If z = 1.5, then the area above z = 1.5 is the percentage of x values that are more than 1.5 standard deviations above the average.  This area is also 6.68%.  
+
+To find the percentage of data within z = -1.5 and z = 1.5, you simply use the fact that the area under the curve is 100%, so the percentage of data between the two z values is 100 – 6.68 – 6.68 = 86.64%.  You can determine these percentages from a table of z values (see our publication on the [normal distribution](https://www.spcforexcel.com/knowledge/basic-statistics/normal-distribution)) or by using Excel’s NORMSDIST function.
+
+These percentages can also be viewed as probabilities, e.g., the probability of getting a result that is less than -1.5 standard deviations below the average is 0.0668.  We will make use of this knowledge below.  Now back to the steps in hypothesis testing.
+
+
+
+### STEP 1: FORMULATE THE NULL HYPOTHESIS AND ALTERNATIVE HYPOTHESIS
+
+![Hypothesis testing](https://www.spcforexcel.com/files/images/hypothesis_testing_1.png)You probably have heard of the null hypothesis and alternative hypothesis.  We will start with the null hypothesis, which is denoted by H0.  Remember, you want to investigate if the process change will impact the average coating thickness.  The null hypothesis is set up to assume that nothing changes – that the status quo holds – or in this case, the process change will not impact the average coating thickness. 
+
+So the null hypothesis (H0) is that the process change will not impact the average coating thickness; the average coating thickness (μ) will remain at 5.  This is usually written as:
+
+​											H0 = 5
+
+Now for the alternative hypothesis, which is denoted by H1.  The alternative hypothesis is that the process change will have an effect on the average coating thickness and the average coating thickness will not equal 5.  This is usually written as:
+
+​											H1 ≠ 5
+
+This is called a two-sided hypothesis test since you are only interested if the mean is not equal to 5.  You can have one-sided tests where you want the mean to be greater than or less than some value.
+ 
+
+### STEP 2: DETERMINE THE SIGNIFICANCE LEVEL YOU WANT
+
+The significance level is important in hypothesis testing.  It is the probability of rejecting the null hypothesis when it is true.  This probability is denoted by α.  Typical values of α include 0.05 and 0.01.  You decide that you want α to be 0.05.  This means that there is only a 5% of chance of rejecting the null hypothesis when it is actually true. 
+
+
+
+### STEP 3: COLLECT THE DATA AND CALCULATE THE SAMPLE STATISTICS
+
+The process change is made and data are collected.  The team recommended collecting 25 samples over time.  (Note: The choice of sample size is very important.  This will be subject of next month’s publication.)  The average coating thickness was measured for each sample.  The following statistics were then calculated:
+
+​							X  = average coating thickness = 5.06
+
+​						s = standard deviation of the coating thickness = 0.20
+
+We have our statistics.  How do you decide to accept or reject the null hypothesis?  The way you do this is to assume that the null hypothesis is true and then determine the probability (p value) of getting this sample average.  If the p value is large, it means that there is large probability of getting an average thickness of 5.06 with a standard deviation of 0.20 when the null hypothesis is true and you will accept that the null hypothesis is probably true.  But if the probability of getting these statistics is small, you will assume that the null hypothesis is probably not true and reject it in favor the alternative hypothesis.
+
+
+
+### STEP 4: CALCULATE THE P VALUE
+
+To determine this probability, you will need to consider your sampling distribution.    The distribution of sample averages tends to be normal when the sample size is large enough.  We will use this assumption here.  So, your sampling distribution is represented by all the possible sample averages of sample size 25 from the population of coating thicknesses.  This normal distribution is shown in Figure 2.
+
+**Figure 2: Normal Distribution for Sample Averages**
+
+![sampling distribution](https://www.spcforexcel.com/files/images/sampling_distribution.png)
+
+The highest point on the curve is the average.  The population average of the sample averages (μX ) is equal to the population average, μ, so we have just used μ in Figure 1.  The standard deviation of the sample averages is denoted by σX.
+
+To be able to draw your sampling distribution, you need to know μX  and  σX.  Since you assumed that the null hypothesis is true, μX  = 5.0.  The standard deviation of the sample averages is given by:
+
+​										σX =σ/√n
+
+where σ is the population standard deviation and n is the sample size.  
+
+You don’t know what the population standard deviation is, but you have an estimate from the sample statistics.  The standard deviation of the 25 samples was 0.2.  You can use this as the population standard deviation.
+
+​								σX =σ/√n =  s/√n=0.2/√25=0.04
+
+Now you can draw the sampling distribution and add the sample average as shown in Figure 3.
+
+**Figure 3: Sampling Distribution**
+
+![sampling distrbution with mean = 5](https://www.spcforexcel.com/files/images/sampling_distribution_5.png)
+
+You want to know what the probability of getting X = 5.06 is with this sampling distribution.  You can view this probability as how far from μ the sample average is.  The further away it is, the smaller the probability of getting X = 5.06 with this sampling distribution.
+
+Now we return to the z score.  Remember, the z score is a measure of how many standard deviations the sample average (X )is from the population average (μ).   For this example, the z value is calculated as:
+
+​								z=  (X-μ)/σX =(5.06-5)/.04=.06/.04=1.5
+
+So, 5.06 is 1.5 standard deviations away from the average.    As shown above, the probability of getting a result that is 1.5 standard deviations away from the average is 0.0668.  Remember, this a two-side test, so you didn’t care if the difference was above or below the average.  So, the probability of getting an average that is more than 1.5 standard deviations away from the average is 2(0.0668) = 0.1336 or 13.36%.  This is the p value:
+
+​										p value = 0.1336
+
+Remember what the p value represents.  You assumed that the null hypothesis is true.  The p value is the probability of getting this result (or a more extreme result) if the null hypothesis is true.
+
+
+
+### STEP 5:  COMPARE THE P VALUE TO THE DESIRED SIGNIFICANCE LEVEL
+
+In step 2, we set the significance level at 0.05.  Since our p value is greater than this, we conclude that the coating thickness was not impacted by the process change.  We accept the null hypothesis as probably being true.  If the p value had been less than 0.05, we would rejected the null hypothesis and said that the process change did impact the coating thickness.
+
+
+
+### SUMMARY
+
+This newsletter has taken a look at how to perform hypothesis testing.  The five steps are:
+
+1. Formulate the null hypothesis and the alternative hypothesis
+2. Determine the significance level you want
+3. Collect the data and calculate the sample statistics
+4. Calculate the p value for the hypothesis test
+5. Compare the p value to the desired significance level
+
+The normal distribution was used to demonstrate how hypothesis testing is done.  You will not always be dealing with the normal distribution but the process is essentially the same.  One item that is still to be discussed is how to select the sample size.  This will be the subject of a later publication.
