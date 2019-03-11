@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cultivo-hy.github.io/sitemap.xml
