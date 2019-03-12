@@ -29,7 +29,7 @@ bioinfomatic를 하다보면 Java로 프로그램을 돌리는 경우가 종종 
 
 **WAS(Web Application server)**상에서 JAVA 기반 어플리케이션을 구동시키다 보면 **OOM(Out Of Memory)** 관련 에러를 심심치 않게 볼 수 있다. 그래서 메모리 최적화 까지는 아니더라도,메모리 관련 옵션이 어떤 의미인지 정리해두고 조금이나마 메모리 사용 구조에 대한 이해를 하고자 한다.
 
-  ![1552371953610](https://user-images.githubusercontent.com/23732754/54179175-5d93ba80-44db-11e9-97a9-45337f145aca.png)
+![1552371953610](https://user-images.githubusercontent.com/23732754/54179175-5d93ba80-44db-11e9-97a9-45337f145aca.png)
 
 ​     
 
