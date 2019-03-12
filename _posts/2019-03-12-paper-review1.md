@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "[논문리뷰] Parallel Multiscale Autoregressive Density Estimation
+title: "[논문리뷰] Parallel Multiscale Autoregressive Density Estimation"
 
 tags:
 
