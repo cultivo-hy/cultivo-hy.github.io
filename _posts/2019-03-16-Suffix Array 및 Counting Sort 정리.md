@@ -69,7 +69,8 @@ if (g[x] == g[y]) \rightarrow compare \space g[x+t] \space , \space g[y+t]
 $$
 그러므로 2개 길이 단위에서 4개길이 단위를 만드는데, 최대 비교회수는 2번이다.  간단히 얘기하자면, 코딩할 때 (g[x],g[x+t])와 (g[y],g[y+t])를 pair<int,int>로 만들어 놓고 정렬하면 된다는 것이다.  같은 방식으로 [4개 단위에 대한 그룹인덱스]를 가지고 있다면 [8개 단위의 새로운 그룹인덱스]를 만들때에도 최대 2번까지만 비교하게 된다.
 
- Sorting 알고리즘을 Counting sort로 선택할 경우 정렬 반복횟수는 O(N)이 되어, 전체적인 시간복잡도는 다음과 같다.
+만약 Counting sort로 선택할 경우 정렬 반복횟수는 O(N)이 되어, 전체적인 시간복잡도는 다음과 같다.
+
 $$
 O(NlogN)
 $$
@@ -321,5 +322,7 @@ if __name__ == '__main__':
 #### Reference
 
 https://blog.myungwoo.kr/57
+
 https://bowbowbow.tistory.com/8
+
 https://plzrun.tistory.com/entry/Suffix-Array-ONlogNlgN%EA%B3%BC-ONlogN-%EA%B5%AC%ED%98%84-%EB%B0%8F-%EC%84%A4%EB%AA%85
