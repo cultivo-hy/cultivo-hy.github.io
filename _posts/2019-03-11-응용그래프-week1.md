@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "[Graph] 응용 그래프(Applied Graph Theroy)"
+title: "[Graph] 응용 그래프(Applied Graph Theory)"
 
 tags:
 
